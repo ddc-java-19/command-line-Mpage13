@@ -1,9 +1,12 @@
 package edu.cnm.deepdive;
 
+import java.sql.SQLOutput;
+
 public class Main {
 
   public static void main(String[] args) {
     boolean convertingFromCelsius = true;
+    System.out.println("Converting from Celsius");
     for (String arg : args) {
       char selector = arg.toLowerCase().charAt(0);
       if (selector== 'c') {
