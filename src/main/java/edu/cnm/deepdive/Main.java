@@ -9,7 +9,7 @@ public class Main {
     System.out.println("Converting from Celsius");
     for (String arg : args) {
       char selector = arg.toLowerCase().charAt(0);
-      if (selector== 'c') {
+      if (selector == 'c') {
         convertingFromCelsius = true;
         System.out.println("Switching to convert from Celsius");
       } else if (selector == 'f') {
@@ -17,12 +17,7 @@ public class Main {
         System.out.println("Switching to convert from Fahrenheit");
       } else {
         double input = Double.parseDouble(arg);
-        double output;
-        if (convertingFromCelsius) {
-          output = convertC2F(input);
-        } else {
-          output = convertF2C(input);
-        }
+        double output = convertingFromCelsius ? convertC2F(input) : convertF2C(input);
         System.out.println(output);
       }
     }
